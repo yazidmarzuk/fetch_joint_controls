@@ -144,7 +144,7 @@ if __name__ == '__main__':
 
     # Move torso up!
     torso_time = np.ones((1, 1, torso_client.config['joints_num'])) * 4
-    torso_goal_pos = np.ones((1, 1, torso_client.config['joints_num'])) * 0.5
+    torso_goal_pos = np.ones((1, 1, torso_client.config['joints_num'])) * 0.1
     torso_goal_vel = np.ones((1, 1, torso_client.config['joints_num'])) * 0.0
     torso_waypoints = np.concatenate([torso_time, torso_goal_pos, torso_goal_vel], axis=1)
     rospy.loginfo("Raising torso...")
@@ -178,7 +178,7 @@ if __name__ == '__main__':
 
     arm_waypoints = arm_client.create_zero_waypoint()
     arm_waypoints[:, 0, :] = 4.
-    arm_waypoints[:, 1, :] = np.array([-0.2006661959, -0.1453983098, -0.8702124529, 1.6226107437, -0.7232583132, 0.6575106085, -0.7030806393])
+    arm_waypoints[:, 1, :] = np.array([0.6201722588724593, -0.15690860504584547, 1.3570494846503394, 0.9267581282846685, -0.6818757762161156, 0.4576564194194165, -0.911895175516149])
     # arm_waypoints[:, 1, :] = np.array([0.2824558974894058, -0.057202187159564696, -0.3893367955496445, 0.7184097570171067, -0.2102948033771266, 0.2035055519724829, 0.36164821064252367])
     arm_waypoints[:, 2, :] = 0.
     arm_waypoints = np.concatenate([arm_client.current_waypoint(), arm_waypoints], axis=0)
