@@ -51,26 +51,6 @@ optimizerMessage.msg
   # Optimizer-generated trajectory command
 ```
 
-## Git History Summary
-
-| Commit | Description |
-|---|---|
-| `cf224a1` | Initial working joint position + velocity tracking in simulation and on hardware |
-| `f766a19` | Single joint tracking test confirmed working |
-| `6f946ae`, `d23316a` | Added optimizer-based control subscriber |
-| `3c4d091` | Fixed ROS topic publisher |
-| `0ae793f` | Acceleration-based waypoints (needs debugging) |
-| `c0de227` | Trajectory planning without ROS; offline plotting |
-| `410d7e5` | Correct graph plotting for commanded vs actual trajectories |
-| `60f4148` | Smoothed trajectory implementation |
-| `1a2b544` | Save-point for smoothed trajectory plots |
-| `7d6e6b5` | Version without interpolation |
-| `73ccff0`–`3c3233d` | Interpolation and discretization added |
-| `cdb9770` | Gripper code updated |
-| `d0a5818` | Increased control loop speed |
-| `07f99d7` | General updates |
-| `d495e88` | Added IK testing module |
-
 ## Running
 
 ```bash
